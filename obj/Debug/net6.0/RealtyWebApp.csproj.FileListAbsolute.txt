@@ -1,0 +1,69 @@
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\appsettings.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.staticwebassets.runtime.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.exe
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.deps.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.runtimeconfig.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\ref\RealtyWebApp.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.pdb
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.AssemblyInfo.cs
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\scopedcss\bundle\RealtyWebApp.styles.css
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\ref\RealtyWebApp.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.pdb
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.genruntimeconfig.cache
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Humanizer.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.CopyComplete
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\User\Desktop\code learners hub\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.staticwebassets.runtime.json
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\appsettings.Development.json
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\appsettings.json
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.exe
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.deps.json
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.runtimeconfig.json
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\ref\RealtyWebApp.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\RealtyWebApp.pdb
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Humanizer.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\MySqlConnector.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\projects\RealtyWebApp\RealtyWebApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.AssemblyReference.cache
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.AssemblyInfoInputs.cache
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.AssemblyInfo.cs
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.CoreCompileInputs.cache
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.MvcApplicationPartsAssemblyInfo.cs
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\scopedcss\bundle\RealtyWebApp.styles.css
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.csproj.CopyComplete
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.dll
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\ref\RealtyWebApp.dll
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.pdb
+C:\projects\RealtyWebApp\RealtyWebApp\obj\Debug\net6.0\RealtyWebApp.genruntimeconfig.cache
