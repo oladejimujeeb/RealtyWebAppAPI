@@ -5,6 +5,7 @@ using RealtyWebApp.Models.RequestModel;
 
 namespace RealtyWebApp.Controllers
 {
+    /*[ApiController]*/
     public class PropertyController : ControllerBase
     {
         private readonly IPropertyService _propertyService;
@@ -16,7 +17,7 @@ namespace RealtyWebApp.Controllers
         [HttpGet("AllProperty")]
         public  IActionResult AllProperty()
         {
-            var allProperty = _propertyService.AllProperty();
+            var allProperty = _propertyService.AllUnverifiedProperty();
             if (allProperty.Status)
             {
                 return Ok(allProperty.Data);
@@ -25,7 +26,7 @@ namespace RealtyWebApp.Controllers
             return BadRequest(allProperty.Message);
         }
 
-        [HttpGet("property")]
+        [HttpGet("RealtorProperty")]
         public IActionResult RealtorProperty()
         {
             var realtorId = 1;

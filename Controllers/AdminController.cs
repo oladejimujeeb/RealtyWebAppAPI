@@ -25,6 +25,41 @@ namespace RealtyWebApp.Controllers
             }
             return BadRequest("Registration failed");
         }
-        
+
+        public async Task<IActionResult> GetPropertyById()
+        {
+            var propertyId = 2;
+            var property = await _adminService.GetPropertyById(propertyId);
+            if (property.Status)
+            {
+                return Ok(property.Data.ImagePath);//getting all imagePath 
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
+
+        public IActionResult AllUnapprovedProperties()
+        {
+            var properties = _adminService.AllUnverifiedProperty();
+            if (properties.Status)
+            {
+                return Ok(properties.Data);
+            }
+
+            return Content("No Data");
+        }
+
+        public IActionResult InspectionRequest()
+        {
+            var getAllInspection = _adminService.VisitationRequest();
+            if (getAllInspection.Status)
+            {
+                return Ok(getAllInspection.Data);
+            }
+
+            return BadRequest("No Info");
+        }
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RealtyWebApp.Migrations
 {
-    public partial class migration : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -170,6 +170,7 @@ namespace RealtyWebApp.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     IsAvailable = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     VerificationStatus = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    IsSold = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     Price = table.Column<double>(type: "double", nullable: false),
                     PlotArea = table.Column<double>(type: "double", nullable: false),
                     Toilet = table.Column<int>(type: "int", nullable: false),
@@ -184,8 +185,9 @@ namespace RealtyWebApp.Migrations
                     PropertyRegNo = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Latitude = table.Column<double>(type: "double", nullable: false),
-                    BuyerId = table.Column<int>(type: "int", nullable: false),
-                    RealtorId = table.Column<int>(type: "int", nullable: false)
+                    BuyerIdentity = table.Column<int>(type: "int", nullable: false),
+                    RealtorId = table.Column<int>(type: "int", nullable: false),
+                    BuyerId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -194,8 +196,7 @@ namespace RealtyWebApp.Migrations
                         name: "FK_Properties_Buyers_BuyerId",
                         column: x => x.BuyerId,
                         principalTable: "Buyers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Properties_Realtors_RealtorId",
                         column: x => x.RealtorId,
@@ -242,7 +243,7 @@ namespace RealtyWebApp.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Data = table.Column<byte[]>(type: "longblob", nullable: true),
-                    PropertyId = table.Column<int>(type: "int", nullable: true),
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
                     DocumentName = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     FileType = table.Column<string>(type: "longtext", nullable: true)
@@ -252,6 +253,8 @@ namespace RealtyWebApp.Migrations
                     Description = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UploadedBy = table.Column<int>(type: "int", nullable: false),
+                    PropertyRegNo = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     CreatedOn = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
@@ -261,7 +264,8 @@ namespace RealtyWebApp.Migrations
                         name: "FK_PropertyDocuments_Properties_PropertyId",
                         column: x => x.PropertyId,
                         principalTable: "Properties",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -273,7 +277,7 @@ namespace RealtyWebApp.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DocumentPath = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    PropertyId = table.Column<int>(type: "int", nullable: true),
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
                     DocumentName = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     FileType = table.Column<string>(type: "longtext", nullable: true)
@@ -283,6 +287,8 @@ namespace RealtyWebApp.Migrations
                     Description = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UploadedBy = table.Column<int>(type: "int", nullable: false),
+                    PropertyRegNo = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     CreatedOn = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
@@ -292,7 +298,8 @@ namespace RealtyWebApp.Migrations
                         name: "FK_PropertyImages_Properties_PropertyId",
                         column: x => x.PropertyId,
                         principalTable: "Properties",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

@@ -4,20 +4,20 @@
 
 namespace RealtyWebApp.Migrations
 {
-    public partial class initialmigouygv : Migration
+    public partial class initialadd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "PropertyRegNo",
-                table: "PropertyImages",
+                name: "Address",
+                table: "VisitationRequests",
                 type: "longtext",
                 nullable: true)
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.AddColumn<string>(
                 name: "PropertyRegNo",
-                table: "PropertyDocuments",
+                table: "VisitationRequests",
                 type: "longtext",
                 nullable: true)
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -26,12 +26,12 @@ namespace RealtyWebApp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "PropertyRegNo",
-                table: "PropertyImages");
+                name: "Address",
+                table: "VisitationRequests");
 
             migrationBuilder.DropColumn(
                 name: "PropertyRegNo",
-                table: "PropertyDocuments");
+                table: "VisitationRequests");
         }
     }
 }

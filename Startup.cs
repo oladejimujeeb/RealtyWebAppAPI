@@ -39,6 +39,7 @@ namespace RealtyWebApp
             services.AddScoped<IBuyerRepository, BuyerRepository>();
             services.AddScoped<IPropertyRepository, PropertyRepository>();
             services.AddScoped<IPropertyDocument, PropertyDocumentRepository>();
+            services.AddScoped<IVisitationRepository, VisitationRepository>();
             services.AddScoped<IPropertyImage, PropertyImageRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IRoleRepository,RoleRepository>();
@@ -48,6 +49,7 @@ namespace RealtyWebApp
             services.AddScoped<IPropertyImageService,PropertyImageService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IPropertyService, PropertyService>();
+            services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 	     services.AddDbContext<ApplicationContext>(options => options.UseMySql
                 (Configuration.GetConnectionString("ApplicationContext"),
                 ServerVersion.AutoDetect(Configuration.GetConnectionString		("ApplicationContext"))));

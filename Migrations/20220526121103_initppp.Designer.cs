@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RealtyWebApp.Context;
 
@@ -10,9 +11,10 @@ using RealtyWebApp.Context;
 namespace RealtyWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220526121103_initppp")]
+    partial class initppp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,7 +100,7 @@ namespace RealtyWebApp.Migrations
                     b.Property<string>("FileType")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("PropertyId")
+                    b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
                     b.Property<string>("PropertyRegNo")
@@ -138,7 +140,7 @@ namespace RealtyWebApp.Migrations
                     b.Property<string>("FileType")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("PropertyId")
+                    b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
                     b.Property<string>("PropertyRegNo")
@@ -343,9 +345,6 @@ namespace RealtyWebApp.Migrations
                     b.Property<int>("RealtorId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("RegisteredDate")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("Status")
                         .HasColumnType("longtext");
 
@@ -399,9 +398,6 @@ namespace RealtyWebApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Address")
-                        .HasColumnType("longtext");
-
                     b.Property<string>("BuyerEmail")
                         .HasColumnType("longtext");
 
@@ -416,9 +412,6 @@ namespace RealtyWebApp.Migrations
 
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
-
-                    b.Property<string>("PropertyRegNo")
-                        .HasColumnType("longtext");
 
                     b.Property<string>("PropertyType")
                         .HasColumnType("longtext");
@@ -461,7 +454,9 @@ namespace RealtyWebApp.Migrations
                 {
                     b.HasOne("RealtyWebApp.Entities.Property", "Property")
                         .WithMany("PropertyDocuments")
-                        .HasForeignKey("PropertyId");
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Property");
                 });
@@ -470,7 +465,9 @@ namespace RealtyWebApp.Migrations
                 {
                     b.HasOne("RealtyWebApp.Entities.Property", "Property")
                         .WithMany("PropertyImages")
-                        .HasForeignKey("PropertyId");
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Property");
                 });

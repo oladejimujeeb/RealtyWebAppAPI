@@ -12,6 +12,7 @@ namespace RealtyWebApp.Entities
         public string Action { get; set; }
         public bool IsAvailable { get; set; }
         public bool VerificationStatus { get; set; }
+        public bool IsSold { get; set; }
         public double Price { get; set; }
         public double PlotArea { get; set; }
         public int Toilet { get; set; }
@@ -25,11 +26,13 @@ namespace RealtyWebApp.Entities
         public List<PropertyDocument> PropertyDocuments { get; set; } = new List<PropertyDocument>();
         public List<PropertyImage> PropertyImages { get; set; } = new List<PropertyImage>();
         public int BuyerIdentity { get; set; }
+        //public int BuyerId { get; set; }
         /*public Buyer Buyer { get; set; }*/
         /*public FileModel FileModel { get; set; }*/
         public int RealtorId { get; set; }
         public Realtor Realtor { get; set; }
         public Payment Payment { get; set; }
+        public DateTime? RegisteredDate { get; set; }
         public ICollection<VisitationRequest> VisitationRequests{ get; set; }= new List<VisitationRequest>();
     }
 }

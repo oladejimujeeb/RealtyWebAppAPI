@@ -32,15 +32,15 @@ namespace RealtyWebApp.Controllers
             var addProperty = await _realtorService.AddProperty(model,realtorId);
             if (addProperty.Status)
             {
-                return Ok(addProperty.Data.PropertyRegNo);
+                return Ok(addProperty.Data.ImagePath);
             }
             return BadRequest(addProperty.Message);
         }
         
-        [HttpPut("UpdateProfile")]
+        [HttpPatch("UpdateProfile")]
         public async Task<IActionResult> UpDateProfile(RealtorUpdateRequest request)
         {
-            var realtorId = 1;
+            var realtorId = 2;
             var update = await _realtorService.UpdateRealtorInfo(request, realtorId);
             if (update.Status)
             {
@@ -48,6 +48,48 @@ namespace RealtyWebApp.Controllers
             }
 
             return BadRequest(update.Message);
+        }
+        [HttpGet("RealtorProperty")]
+        public IActionResult GetRealtorProperties()
+        {
+            var realtorId = 2;
+            var realtorProperty =  _realtorService.GetPropertyByRealtorId(realtorId);
+            if (realtorProperty.Status)
+            {
+                return Ok(realtorProperty.Data);
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
+        [HttpGet("ApprovedProperty")]
+        public IActionResult RealtorApprovedProperties()
+        {
+            var realtorId = 2;
+            var realtorProperty =  _realtorService.GetRealtorApprovedProperty(realtorId);
+            if (realtorProperty.Status)
+            {
+                return Ok(realtorProperty.Data);
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
+
+        public IActionResult RealtorySoldProperties()
+        {
+            var realtorId = 2;
+            var realtorProperty = _realtorService.GetSoldPropertyByRealtor(realtorId);
+            if (realtorProperty.Status)
+            {
+                return Ok(realtorProperty.Data);
+            }
+            else
+            {
+                return NoContent();
+            }
         }
     }
 }
