@@ -12,5 +12,7 @@ namespace RealtyWebApp.Interface.IServices
         Task<BaseResponseModel<PropertyDto>> GetPropertyById(int id);
         BaseResponseModel<IEnumerable<PropertyDto>> AllUnverifiedProperty();
         BaseResponseModel<IEnumerable<VisitationRequestDto>> VisitationRequest();
+        Task<BaseResponseModel<BaseResponseModel<PropertyDto>>> UpdateRealtorPropertyForSale(int propertyId, UpdatePropertyModel updateProperty);
+        BaseResponseModel<IEnumerable<PropertyDto>> SearchPropertyByRegNo(SearchRequest searchRequest);
     }
 }

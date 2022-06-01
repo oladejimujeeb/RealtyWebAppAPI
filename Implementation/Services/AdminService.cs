@@ -19,15 +19,17 @@ namespace RealtyWebApp.Implementation.Services
         private readonly IUserRepository _userRepository;
         private readonly IPropertyRepository _propertyRepository;
         private readonly IVisitationRepository _visitationRepository;
+        private readonly IPropertyImage _propertyImage;
 
-        public AdminService(IAdminRepository adminRepository, IRoleRepository roleRepository, IUserRepository userRepository, IPropertyRepository propertyRepository, IVisitationRepository visitationRepository)
+        public AdminService(IAdminRepository adminRepository, IRoleRepository roleRepository, IUserRepository userRepository, IPropertyRepository propertyRepository, IVisitationRepository visitationRepository, IPropertyImage propertyImage)
         {
             _adminRepository = adminRepository;
             _roleRepository = roleRepository;
             _userRepository = userRepository;
             _propertyRepository = propertyRepository;
             _visitationRepository = visitationRepository;
-        }   
+            _propertyImage = propertyImage;
+        }  
         public async Task<BaseResponseModel<AdminDto>> RegisterAdmin(AdminRequestModel model)
         {
             var checkMail = await _userRepository.Exists(x => x.Email == model.Email);
@@ -132,7 +134,9 @@ namespace RealtyWebApp.Implementation.Services
                     Status = getProperty.Status,
                     VerificationStatus = getProperty.VerificationStatus,
                     IsAvailable = getProperty.IsAvailable,
-                    ImagePath = getProperty.PropertyImages.Select(z=>z.DocumentPath).ToList(),
+                    LGA = getProperty.LGA,
+                    State = getProperty.State,
+                    ImagePath =_propertyImage.QueryWhere(y=>y.PropertyRegNo==getProperty.PropertyRegNo).Select(y=>y.DocumentPath).ToList() //getProperty.PropertyImages.Select(z=>z.DocumentPath).ToList(),
                 },
                 Message = "load successfully"
             };
@@ -164,6 +168,8 @@ namespace RealtyWebApp.Implementation.Services
                     PropertyRegNo = x.PropertyRegNo,
                     IsSold = x.IsSold,
                     RegisteredDate = x.RegisteredDate,
+                    LGA = x.LGA,
+                    State = x.State,
                     //ImagePath = x.PropertyImages.Select(z=>z.DocumentPath).ToList(),//Possible Error
                 }).OrderBy(x=>x.RegisteredDate).ToList();
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
@@ -176,11 +182,10 @@ namespace RealtyWebApp.Implementation.Services
         public BaseResponseModel<IEnumerable<VisitationRequestDto>> VisitationRequest()
         {
             var inspectionRequest =
-                _visitationRepository.QueryWhere(x => x.RequestDate < DateTime.Now.AddDays(-4)).
+                _visitationRepository.QueryWhere(x => x.RequestDate > DateTime.Now.AddDays(-4)).
                     Select(x=>new VisitationRequestDto
                     {
                         Id = x.Id,
-                        Address = x.Address,
                         BuyerId = x.BuyerId,
                         BuyerName = x.BuyerName,
                         PropertyAddress = x.Address,
@@ -190,12 +195,110 @@ namespace RealtyWebApp.Implementation.Services
                         PropertyRegNo = x.PropertyRegNo,
                         RequestDate = x.RequestDate,
                     }).OrderBy(x=>x.RequestDate).ToList();
+            if (inspectionRequest.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<VisitationRequestDto>>()
+                {
+                    Status = false,
+                    Message = "No available request"
+                };
+            }
             return new BaseResponseModel<IEnumerable<VisitationRequestDto>>()
             {
                 Status = true,
                 Data = inspectionRequest
             };
                     
+        }
+
+        public async Task<BaseResponseModel<BaseResponseModel<PropertyDto>>>UpdateRealtorPropertyForSale(int propertyId, UpdatePropertyModel updateProperty)
+        {
+            var getProperty = await _propertyRepository.Get(x => x.Id == propertyId);
+            if (getProperty == null)
+            {
+                return new BaseResponseModel<BaseResponseModel<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "Update failed",
+                };
+            }
+            getProperty.Address = updateProperty.Address;
+            getProperty.Bedroom = updateProperty.Bedroom;
+            getProperty.Features = updateProperty.Features;
+            getProperty.Latitude = updateProperty.Latitude;
+            getProperty.Longitude = updateProperty.Longitude;
+            getProperty.Price = updateProperty.Price;
+            getProperty.Status = updateProperty.Status.ToString();
+            getProperty.Toilet = updateProperty.Toilet;
+            getProperty.BuildingType = updateProperty.BuildingType;
+            getProperty.IsAvailable = updateProperty.IsAvailable;
+            getProperty.IsSold = updateProperty.IsSold;
+            getProperty.VerificationStatus = updateProperty.VerificationStatus;
+            getProperty.PlotArea = updateProperty.PlotArea;
+            getProperty.PropertyType = updateProperty.PropertyType;
+            getProperty.LGA = updateProperty.LGA;
+            getProperty.State = updateProperty.State;
+            getProperty.Action = updateProperty.Action;
+            var upDate = await _propertyRepository.Update(getProperty);
+            if (upDate == null)
+            {
+                return new BaseResponseModel<BaseResponseModel<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "Update failed",
+                };
+            }
+            return new BaseResponseModel<BaseResponseModel<PropertyDto>>()
+            {
+                Status = true,
+                Message = $"Property {upDate.PropertyRegNo} updated successfully"
+            };
+        }
+
+        public BaseResponseModel<IEnumerable<PropertyDto>> SearchPropertyByRegNo(SearchRequest searchRequest)
+        {
+            var getProperty = _propertyRepository.QueryWhere(x => x.PropertyRegNo == searchRequest.PropertyRegNo)
+                .Select(x => new PropertyDto()
+                {
+                    Id = x.Id,
+                    Address = x.Address,
+                    Bedroom = x.Bedroom,
+                    Features = x.Features,
+                    Latitude = x.Latitude,
+                    Longitude = x.Longitude,
+                    Toilet = x.Toilet,
+                    BuildingType = x.BuildingType,
+                    BuyerId = x.BuyerIdentity,
+                    IsSold = x.IsSold,
+                    LandArea = x.PlotArea,
+                    PropertyPrice = x.Price,
+                    RealtorId = x.RealtorId,
+                    PropertyType = x.PropertyType,
+                    PropertyRegNumber = x.PropertyRegNo,
+                    Action = x.Action,
+                    Status = x.Status,
+                    VerificationStatus = x.VerificationStatus,
+                    IsAvailable = x.IsAvailable,
+                    LGA = x.LGA,
+                    State = x.State,
+                    ImagePath = _propertyImage.QueryWhere(y => y.PropertyRegNo == x.PropertyRegNo)
+                        .Select(y => y.DocumentPath)
+                        .ToList() 
+                }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>
+                {
+                    Status = false,
+                    Message = "Not found"
+                };
+            }
+
+            return new BaseResponseModel<IEnumerable<PropertyDto>>
+            {
+                Status = true,
+                Data = getProperty
+            };
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RealtyWebApp.DTOs;
 using RealtyWebApp.Interface.IServices;
 using RealtyWebApp.Models.RequestModel;
 
@@ -25,21 +26,23 @@ namespace RealtyWebApp.Controllers
             }
             return BadRequest("Registration failed");
         }
-
+        
+        [HttpGet("getProperty")]
         public async Task<IActionResult> GetPropertyById()
         {
-            var propertyId = 2;
+            var propertyId = 1;
             var property = await _adminService.GetPropertyById(propertyId);
             if (property.Status)
             {
-                return Ok(property.Data.ImagePath);//getting all imagePath 
+                return Ok(property.Data);//getting all imagePath 
             }
             else
             {
                 return NoContent();
             }
         }
-
+        
+        [HttpGet("UnapprovedProperties")]
         public IActionResult AllUnapprovedProperties()
         {
             var properties = _adminService.AllUnverifiedProperty();
@@ -50,7 +53,8 @@ namespace RealtyWebApp.Controllers
 
             return Content("No Data");
         }
-
+        
+        [HttpGet("InspectionsRequests")]
         public IActionResult InspectionRequest()
         {
             var getAllInspection = _adminService.VisitationRequest();
@@ -59,7 +63,32 @@ namespace RealtyWebApp.Controllers
                 return Ok(getAllInspection.Data);
             }
 
-            return BadRequest("No Info");
+            return BadRequest(getAllInspection.Message);
+        }
+        
+        [HttpPatch("UpdatePropertyForSale")]
+        public async Task<IActionResult> UpdatePropertyForSale( int propertyId, UpdatePropertyModel model)
+        {
+            //int propertyId = 1;
+            var update = await _adminService.UpdateRealtorPropertyForSale(propertyId, model);
+            if (update.Status)
+            {
+                return Ok(update.Message);
+            }
+
+            return BadRequest(update.Message);
+        }
+
+        [HttpGet("SearchByPropertyRegNo")]
+        public IActionResult SearchPropertyWithRegNo(SearchRequest searchRequest)
+        {
+            var result = _adminService.SearchPropertyByRegNo(searchRequest);
+            if (result.Status)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
         }
     }
 }

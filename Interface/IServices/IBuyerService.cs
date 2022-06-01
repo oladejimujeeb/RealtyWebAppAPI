@@ -10,6 +10,7 @@ namespace RealtyWebApp.Interface.IServices
         Task<BaseResponseModel<BuyerDto>> RegisterBuyer(BuyerRequestModel model);
         BaseResponseModel<IEnumerable<PropertyDto>> GetPropertyByBuyer(int buyerId);
         Task<BaseResponseModel<VisitationRequestDto>> MakeVisitationRequest(int buyerId, int propertyId);
-        
+        Task<BaseResponseModel<PropertyDocumentDto>> DownloadPropertyDocument(int documentId);
+        BaseResponseModel<IEnumerable<VisitationRequestDto>> ListOfRequestedProperties(int buyerId);
     }
 }

@@ -19,6 +19,8 @@ namespace RealtyWebApp.Entities
         public int Bedroom { get; set; }
         public string Features { get; set; }
         public string Address { get; set; }
+        public string LGA { get; set; }
+        public string State { get; set; }
         public string BuildingType { get; set; }
         public double Longitude { get; set; }
         public string PropertyRegNo { get; set; }
@@ -26,9 +28,6 @@ namespace RealtyWebApp.Entities
         public List<PropertyDocument> PropertyDocuments { get; set; } = new List<PropertyDocument>();
         public List<PropertyImage> PropertyImages { get; set; } = new List<PropertyImage>();
         public int BuyerIdentity { get; set; }
-        //public int BuyerId { get; set; }
-        /*public Buyer Buyer { get; set; }*/
-        /*public FileModel FileModel { get; set; }*/
         public int RealtorId { get; set; }
         public Realtor Realtor { get; set; }
         public Payment Payment { get; set; }

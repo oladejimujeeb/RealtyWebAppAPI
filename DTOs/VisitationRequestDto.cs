@@ -12,7 +12,7 @@ namespace RealtyWebApp.DTOs
         public string PropertyAddress { get; set; }
         public string PropertyType { get; set; }
         public string PropertyRegNo { get; set; }
-        public string Address { get; set; }
+        
         public DateTime? RequestDate { get; set; }
     }
 }

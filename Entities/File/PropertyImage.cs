@@ -4,6 +4,5 @@ namespace RealtyWebApp.Entities.File
     {
         public string DocumentPath { get; set; }
         public Property Property { get; set; }
-        //public int PropertyId { get; set; }
     }
 }

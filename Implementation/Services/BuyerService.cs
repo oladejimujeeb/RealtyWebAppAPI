@@ -20,14 +20,18 @@ namespace RealtyWebApp.Implementation.Services
         private readonly IUserRepository _userRepository;
         private readonly IPropertyRepository _propertyRepository;
         private readonly IVisitationRepository _visitationRepository;
+        private readonly IPropertyImage _propertyImage;
+        private readonly IPropertyDocument _propertyDocument;
 
-        public BuyerService(IBuyerRepository buyerRepository, IRoleRepository roleRepository, IUserRepository userRepository, IPropertyRepository propertyRepository, IVisitationRepository visitationRepository)
+        public BuyerService(IBuyerRepository buyerRepository, IRoleRepository roleRepository, IUserRepository userRepository, IPropertyRepository propertyRepository, IVisitationRepository visitationRepository, IPropertyImage propertyImage, IPropertyDocument propertyDocument)
         {
             _buyerRepository = buyerRepository;
             _roleRepository = roleRepository;
             _userRepository = userRepository;
             _propertyRepository = propertyRepository;
             _visitationRepository = visitationRepository;
+            _propertyImage = propertyImage;
+            _propertyDocument = propertyDocument;
         }
         public async Task<BaseResponseModel<BuyerDto>> RegisterBuyer(BuyerRequestModel model)
         {
@@ -106,7 +110,7 @@ namespace RealtyWebApp.Implementation.Services
 
         public BaseResponseModel<IEnumerable<PropertyDto>> GetPropertyByBuyer(int buyerId)
         {
-            var getProperty = _propertyRepository.QueryWhere(x => x.BuyerIdentity == buyerId && x.IsAvailable).
+            var getProperty = _propertyRepository.QueryWhere(x => x.BuyerIdentity == buyerId && x.IsAvailable && x.IsSold).
                 Select(x=>new PropertyDto()
                 {
                     Id = x.Id,
@@ -127,8 +131,18 @@ namespace RealtyWebApp.Implementation.Services
                     VerificationStatus = x.VerificationStatus,
                     IsAvailable = x.IsAvailable,
                     PropertyRegNo = x.PropertyRegNo,
-                    ImagePath = x.PropertyImages.Select(z=>z.DocumentPath).ToList(),//Possible Error
+                    LGA = x.LGA,
+                    State = x.State,
+                    ImagePath = _propertyImage.QueryWhere(y=>y.PropertyRegNo==x.PropertyRegNo).Select(y=>y.DocumentPath).ToList() 
                 }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "You have not purchased any property yet"
+                };
+            }
             
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
             {
@@ -145,12 +159,12 @@ namespace RealtyWebApp.Implementation.Services
             {
                 BuyerEmail = getBuyer.Email,
                 BuyerId = getBuyer.Id,
-                BuyerName = $"{getBuyer.FirstName }{getBuyer.LastName}",
+                BuyerName = $"{getBuyer.FirstName } {getBuyer.LastName}",
                 BuyerTelephone = getBuyer.PhoneNumber,
                 PropertyId = getProperty.Id,
                 PropertyType = getProperty.PropertyType,
                 PropertyRegNo = getProperty.PropertyRegNo,
-                Address = getProperty.Address
+                Address = $"{getProperty.Address} {getProperty.LGA} {getProperty.State}"
             };
             var date = DateTime.Now.AddDays(3);
             
@@ -158,13 +172,13 @@ namespace RealtyWebApp.Implementation.Services
             {
                var newDate = date.AddDays(1);
                request.RequestDate = newDate;
-               
             }
             else
             {
                 request.RequestDate = date;
             }
 
+            getProperty.BuyerIdentity = buyerId;
             var addVisitation =await _visitationRepository.Add(request);
             if (addVisitation != request)
             {
@@ -183,6 +197,64 @@ namespace RealtyWebApp.Implementation.Services
                 Message = $"Kind Visit Our office on {visitDate} for Property Inspection," +
                           $" If Date is not convenient call Our Customer Service on 08136794915 to reschedule ",
             };
+        }
+
+        public async Task<BaseResponseModel<PropertyDocumentDto>> DownloadPropertyDocument(int documentId)
+        {
+            var file = await _propertyDocument.Get(x => x.Property.Id == documentId);//Possible Error
+            if (file == null)
+            {
+                return new BaseResponseModel<PropertyDocumentDto>()
+                {
+                    Status = false,
+                    Message = "File failed to download"
+                };
+            }
+
+            return new BaseResponseModel<PropertyDocumentDto>
+            {
+                Data = new PropertyDocumentDto()
+                {
+                    Extension = file.Extension,
+                    DocumentPath = file.DocumentName,
+                    FileType = file.FileType,
+                    Data = file.Data,
+                    PropertyRegNo = file.PropertyRegNo
+                },
+                Status = true
+            };
+        }
+
+        public BaseResponseModel<IEnumerable<VisitationRequestDto>> ListOfRequestedProperties(int buyerId)
+        {
+            var visitationRequest = _visitationRepository.QueryWhere(x => x.BuyerId == buyerId).
+                Select(x=>new VisitationRequestDto
+                {
+                    Id = x.Id,
+                    BuyerId = x.BuyerId,
+                    BuyerName = x.BuyerName,
+                    PropertyAddress = x.Address,
+                    PropertyId = x.PropertyId,
+                    RequestDate = x.RequestDate,
+                    PropertyRegNo = x.PropertyRegNo,
+                    PropertyType = x.PropertyType,
+                    BuyerPhoneNo = x.BuyerTelephone
+                }).ToList();
+            
+            if (visitationRequest.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<VisitationRequestDto>>
+                {
+                    Status = false,
+                    Message = "You have not make any request"
+                };
+            }
+            return new BaseResponseModel<IEnumerable<VisitationRequestDto>>
+            {
+                Status = true,
+                Data = visitationRequest
+            };
+            
         }
     }
 }

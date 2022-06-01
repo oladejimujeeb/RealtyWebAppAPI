@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZOKvhiUeSbILx2WNe1dJRfaHEr+35QxgVgQucusUtP0=",
+  "Hash": "iWYM5JxUflHe3S58Vhy/WdZqYlY458ThjNuEBpR0Rrs=",
   "Source": "RealtyWebApp",
   "BasePath": "_content/RealtyWebApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PropertyImages\\3bedroom 3.jpg"
+    },
+    {
+      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\3D olabisi.jpg",
+      "SourceId": "RealtyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "BasePath": "_content/RealtyWebApp",
+      "RelativePath": "PropertyImages/3D olabisi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PropertyImages\\3D olabisi.jpg"
     },
     {
       "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\4BEDROOM BUNGALOW 2.jpg",
@@ -238,6 +255,23 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\lagos1 (4).jpg"
     },
     {
+      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\MR.OLABISI _2.jpg",
+      "SourceId": "RealtyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "BasePath": "_content/RealtyWebApp",
+      "RelativePath": "PropertyImages/MR.OLABISI _2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PropertyImages\\MR.OLABISI _2.jpg"
+    },
+    {
       "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\oganla mosque.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
@@ -253,6 +287,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PropertyImages\\oganla mosque.jpg"
+    },
+    {
+      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\Shimawa 1.jpg",
+      "SourceId": "RealtyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "BasePath": "_content/RealtyWebApp",
+      "RelativePath": "PropertyImages/Shimawa 1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PropertyImages\\Shimawa 1.jpg"
+    },
+    {
+      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\shimawa 2.jpg",
+      "SourceId": "RealtyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "BasePath": "_content/RealtyWebApp",
+      "RelativePath": "PropertyImages/shimawa 2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PropertyImages\\shimawa 2.jpg"
+    },
+    {
+      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\shimawa 3.jpg",
+      "SourceId": "RealtyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "BasePath": "_content/RealtyWebApp",
+      "RelativePath": "PropertyImages/shimawa 3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PropertyImages\\shimawa 3.jpg"
     }
   ]
 }

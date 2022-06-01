@@ -151,15 +151,6 @@ namespace RealtyWebApp.Implementation.Services
 
         public async Task<BaseResponseModel<PropertyDto>> AddProperty(PropertyRequestModel model, int id)
         {
-            /*var getRealtor = await _realtorRepository.Get(x => x.Id == id);
-            if (getRealtor==null)
-            {
-                return new BaseResponseModel<PropertyDto>()
-                {
-                    Status = false,
-                    Message = "Failed"
-                };
-            }*/
             var addProperty = new Property()
             {
                 VerificationStatus = false,
@@ -175,10 +166,11 @@ namespace RealtyWebApp.Implementation.Services
                 RealtorId = id,
                 IsAvailable = true,
                 Status = Status.UnderReview.ToString(),
-                //BuyerId = 1,
                 PlotArea = model.PlotArea,
-                RegisteredDate = DateTime.Now,
+                RegisteredDate = DateTime.UtcNow,
                 PropertyRegNo = $"PTY{Guid.NewGuid().ToString().Substring(0, 4)}",
+                LGA = model.LGA,
+                State = model.State,
             };
             //AddingProperty Image
             foreach (var image in model.Images)
@@ -281,8 +273,18 @@ namespace RealtyWebApp.Implementation.Services
                     VerificationStatus = x.VerificationStatus,
                     IsAvailable = x.IsAvailable,
                     PropertyRegNo = x.PropertyRegNo,
+                    LGA = x.LGA,
+                    State = x.State,
                     ImagePath = x.PropertyImages.Select(z=>z.DocumentPath).ToList(),//Possible Error
                 }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "No information"
+                };
+            }
             
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
             {
@@ -316,7 +318,17 @@ namespace RealtyWebApp.Implementation.Services
                     IsAvailable = x.IsAvailable,
                     PropertyRegNo = x.PropertyRegNo,
                     IsSold = x.IsSold,
+                    LGA = x.LGA,
+                    State = x.State,
                 }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "No information"
+                };
+            }
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
             {
                 Status = true,
@@ -348,8 +360,18 @@ namespace RealtyWebApp.Implementation.Services
                     VerificationStatus = x.VerificationStatus,
                     IsAvailable = x.IsAvailable,
                     PropertyRegNo = x.PropertyRegNo,
+                    LGA = x.LGA,
+                    State = x.State,
                     //ImagePath = x.PropertyImages.Select(z=>z.DocumentPath).ToList(),//Possible Error
                 }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "No information"
+                };
+            }
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
             {
                 Status = true,

@@ -11,8 +11,8 @@ using RealtyWebApp.Context;
 namespace RealtyWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220530131919_initialadd")]
-    partial class initialadd
+    [Migration("20220531212439_newmigration")]
+    partial class newmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -324,6 +324,9 @@ namespace RealtyWebApp.Migrations
                     b.Property<bool>("IsSold")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("LGA")
+                        .HasColumnType("longtext");
+
                     b.Property<double>("Latitude")
                         .HasColumnType("double");
 
@@ -344,6 +347,12 @@ namespace RealtyWebApp.Migrations
 
                     b.Property<int>("RealtorId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("RegisteredDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Status")
                         .HasColumnType("longtext");

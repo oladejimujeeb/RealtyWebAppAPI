@@ -14,10 +14,10 @@ namespace RealtyWebApp.Controllers
         {
             _propertyService = propertyService;
         }
-        [HttpGet("AllProperty")]
-        public  IActionResult AllProperty()
+        [HttpGet("PropertyListing")]
+        public  IActionResult AllAvailableProperty()
         {
-            var allProperty = _propertyService.AllUnverifiedProperty();
+            var allProperty = _propertyService.AllAvailablePropertyWithImage();
             if (allProperty.Status)
             {
                 return Ok(allProperty.Data);

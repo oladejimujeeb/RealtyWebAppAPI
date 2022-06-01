@@ -25,8 +25,8 @@ namespace RealtyWebApp.Controllers
 
             return BadRequest(signup.Message);
         }
-        [HttpPost("VisitationRequest")]
-        public async Task<IActionResult> VisitationRequest(int propertyId)
+        [HttpGet("MakeInspectionRequest")]
+        public async Task<IActionResult> InspectionRequest(int propertyId)
         {
             var buyerId = 1;
             var visitation = await _buyerService.MakeVisitationRequest(buyerId, propertyId);
@@ -37,8 +37,8 @@ namespace RealtyWebApp.Controllers
 
             return BadRequest(visitation.Message);
         }
-        [HttpGet("BuyerProspectiveProperties")]
-        public IActionResult BuyerProspectiveProperty()
+        [HttpGet("PurchasedProperties")]
+        public IActionResult BuyerPurchasedProperty()
         {
             var buyerId = 1;
             var getProperties =  _buyerService.GetPropertyByBuyer(buyerId);
@@ -47,7 +47,33 @@ namespace RealtyWebApp.Controllers
                 return Ok(getProperties.Data);
             }
 
-            return BadRequest("No Property to display");
+            return BadRequest(getProperties.Message);
+        }
+
+        [HttpGet("DownloadFile")]
+        public async Task<IActionResult> DownloadPropertyDocument(int propertyId)
+        {
+            var file = await _buyerService.DownloadPropertyDocument(propertyId);
+            if (file.Status)
+            {
+                return File(file.Data.Data, file.Data.FileType, file.Data.DocumentPath + file.Data.Extension);
+                //return File(Url.Content("~/Files/text.txt"), "text/plain", "testFile.txt");
+            }
+
+            return BadRequest(file.Message);
+        }
+
+        [HttpGet("propertyInspection")]
+        public IActionResult BuyerPropertyInspection()
+        {
+            int buyerId = 1;
+            var propertyInspection = _buyerService.ListOfRequestedProperties(buyerId);
+            if (propertyInspection.Status)
+            {
+                return Ok(propertyInspection.Data);
+            }
+
+            return BadRequest(propertyInspection.Message);
         }
     }
 }

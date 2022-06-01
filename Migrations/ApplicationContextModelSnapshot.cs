@@ -322,6 +322,9 @@ namespace RealtyWebApp.Migrations
                     b.Property<bool>("IsSold")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("LGA")
+                        .HasColumnType("longtext");
+
                     b.Property<double>("Latitude")
                         .HasColumnType("double");
 
@@ -345,6 +348,9 @@ namespace RealtyWebApp.Migrations
 
                     b.Property<DateTime?>("RegisteredDate")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Status")
                         .HasColumnType("longtext");

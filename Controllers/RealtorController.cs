@@ -6,6 +6,7 @@ using RealtyWebApp.Models.RequestModel;
 
 namespace RealtyWebApp.Controllers
 {
+    [Route("[controller]")]
     public class RealtorController : ControllerBase
     {
         private readonly IRealtorService _realtorService;
@@ -52,44 +53,36 @@ namespace RealtyWebApp.Controllers
         [HttpGet("RealtorProperty")]
         public IActionResult GetRealtorProperties()
         {
-            var realtorId = 2;
+            var realtorId = 1;
             var realtorProperty =  _realtorService.GetPropertyByRealtorId(realtorId);
             if (realtorProperty.Status)
             {
                 return Ok(realtorProperty.Data);
             }
-            else
-            {
-                return NoContent();
-            }
+            return BadRequest(realtorProperty.Message);
         }
         [HttpGet("ApprovedProperty")]
         public IActionResult RealtorApprovedProperties()
         {
-            var realtorId = 2;
+            var realtorId = 1;
             var realtorProperty =  _realtorService.GetRealtorApprovedProperty(realtorId);
             if (realtorProperty.Status)
             {
                 return Ok(realtorProperty.Data);
             }
-            else
-            {
-                return NoContent();
-            }
-        }
 
+            return BadRequest(realtorProperty.Message);
+        }
+        [HttpGet("RealtorSoldProperty")]
         public IActionResult RealtorySoldProperties()
         {
-            var realtorId = 2;
+            var realtorId = 1;
             var realtorProperty = _realtorService.GetSoldPropertyByRealtor(realtorId);
             if (realtorProperty.Status)
             {
                 return Ok(realtorProperty.Data);
             }
-            else
-            {
-                return NoContent();
-            }
+            return BadRequest(realtorProperty.Message);
         }
     }
 }

@@ -47,12 +47,12 @@ namespace RealtyWebApp.Implementation.Services
                     PropertyPrice = getProperty.Price,
                     RealtorId = getProperty.RealtorId,
                     PropertyType = getProperty.PropertyType,
-                    //PropertyRegNumber = getProperty.PropertyRegNo,
+                    PropertyRegNumber = getProperty.PropertyRegNo,
                     Action = getProperty.Action,
                     Status = getProperty.Status,
                     VerificationStatus = getProperty.VerificationStatus,
                     IsAvailable = getProperty.IsAvailable,
-                    ImagePath = getProperty.PropertyImages.Select(z=>z.DocumentPath).ToList(),
+                    //ImagePath = getProperty.PropertyImages.Select(z=>z.DocumentPath).ToList(),
                 },
                 Message = "load successfully"
             };
@@ -75,15 +75,23 @@ namespace RealtyWebApp.Implementation.Services
                     PropertyPrice = x.Price,
                     RealtorId = x.RealtorId,
                     PropertyType = x.PropertyType,
-                    //PropertyRegNumber = x.PropertyRegNo,
+                    PropertyRegNumber = x.PropertyRegNo,
                     Action = x.Action,
                     Status = x.Status,
                     VerificationStatus = x.VerificationStatus,
                     IsAvailable = x.IsAvailable,
                     PropertyRegNo = x.PropertyRegNo,
                     IsSold = x.IsSold,
-                    ImagePath = _propertyImage.QueryWhere(y=>y.PropertyRegNo==x.PropertyRegNo).Select(y=>y.DocumentPath).ToList()//x.PropertyImages.Select(z=>z.DocumentPath).ToList(),//Possible Error
+                    ImagePath = _propertyImage.QueryWhere(y=>y.PropertyRegNo==x.PropertyRegNo).Select(y=>y.DocumentPath).ToList()
                 }).ToList();
+            if (getProperty.Count == 0)
+            {
+                return new BaseResponseModel<IEnumerable<PropertyDto>>()
+                {
+                    Status = false,
+                    Message = "No Available Property"
+                };
+            }
 
             return new BaseResponseModel<IEnumerable<PropertyDto>>()
             {
