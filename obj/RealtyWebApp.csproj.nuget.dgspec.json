@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\RealtyWebApp\\RealtyWebApp\\RealtyWebApp.csproj": {}
+    "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\RealtyWebApp.csproj": {}
   },
   "projects": {
-    "C:\\projects\\RealtyWebApp\\RealtyWebApp\\RealtyWebApp.csproj": {
+    "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\RealtyWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\RealtyWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\RealtyWebApp.csproj",
         "projectName": "RealtyWebApp",
-        "projectPath": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\RealtyWebApp.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\obj\\",
+        "projectPath": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\RealtyWebApp.csproj",
+        "packagesPath": "C:\\Users\\OladejiMujib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\OladejiMujib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +54,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -67,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iWYM5JxUflHe3S58Vhy/WdZqYlY458ThjNuEBpR0Rrs=",
+  "Hash": "x5s9sUmS5O8QvgvhOPASYlRdvpi1ufkqxQlw1OIp/qY=",
   "Source": "RealtyWebApp",
   "BasePath": "_content/RealtyWebApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RealtyWebApp\\wwwroot",
       "Source": "RealtyWebApp",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\3bedroom 2.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\3bedroom 2.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/3bedroom 2.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\3bedroom 2.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\3bedroom 3.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\3bedroom 3.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/3bedroom 3.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\3bedroom 3.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\3D olabisi.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\3D olabisi.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/3D olabisi.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\3D olabisi.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\4BEDROOM BUNGALOW 2.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\4BEDROOM BUNGALOW 2.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/4BEDROOM BUNGALOW 2.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\4BEDROOM BUNGALOW 2.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\adigun K 1.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\adigun K 1.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/adigun K 1.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\adigun K 1.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\adigun K 2.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\adigun K 2.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/adigun K 2.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\adigun K 2.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\adigun K 3.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\adigun K 3.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/adigun K 3.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\adigun K 3.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\bryan 5.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\bryan 5.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/bryan 5.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\bryan 5.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\downloadfile_page-0001.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\downloadfile_page-0001.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/downloadfile_page-0001.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\downloadfile_page-0001.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\EGBODI PLAN.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\EGBODI PLAN.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/EGBODI PLAN.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\EGBODI PLAN.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\FIVEBD.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\FIVEBD.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/FIVEBD.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\FIVEBD.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\images.jpeg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\images.jpeg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/images.jpeg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\images.jpeg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\laa.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\laa.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/laa.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\laa.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\lagos1 (4).jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\lagos1 (4).jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/lagos1 (4).jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\lagos1 (4).jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\MR.OLABISI _2.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\MR.OLABISI _2.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/MR.OLABISI _2.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\MR.OLABISI _2.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\oganla mosque.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\oganla mosque.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/oganla mosque.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\oganla mosque.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\Shimawa 1.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\Shimawa 1.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/Shimawa 1.jpg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\Shimawa 1.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\shimawa 2.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\shimawa 2.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/shimawa 2.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\PropertyImages\\shimawa 2.jpg"
     },
     {
-      "Identity": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\PropertyImages\\shimawa 3.jpg",
+      "Identity": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\PropertyImages\\shimawa 3.jpg",
       "SourceId": "RealtyWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\projects\\RealtyWebApp\\RealtyWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\OladejiMujib\\source\\repos\\RealtyWebAppAPI\\wwwroot\\",
       "BasePath": "_content/RealtyWebApp",
       "RelativePath": "PropertyImages/shimawa 3.jpg",
       "AssetKind": "All",
