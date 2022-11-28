@@ -7,7 +7,7 @@ using RealtyWebApp.Models.RequestModel;
 namespace RealtyWebApp.Controllers
 {
     
-    [Route("[controller]")]
+    [Route("Api/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly IAdminService _adminService;

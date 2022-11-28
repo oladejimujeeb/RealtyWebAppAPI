@@ -27,6 +27,7 @@ namespace RealtyWebApp.Controllers
             return BadRequest(addRealtor.Message);
         }
         [HttpPost("AddProperty")]
+       
         public async Task<IActionResult> AddProperty(PropertyRequestModel model)
         {
             var realtorId = 1;
@@ -51,6 +52,7 @@ namespace RealtyWebApp.Controllers
             return BadRequest(update.Message);
         }
         [HttpGet("RealtorProperty")]
+        [ProducesResponseType(typeof(BaseResponseModel<PropertyDto>), 200)]
         public IActionResult GetRealtorProperties()
         {
             var realtorId = 1;
